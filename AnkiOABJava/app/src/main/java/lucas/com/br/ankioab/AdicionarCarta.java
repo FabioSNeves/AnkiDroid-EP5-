@@ -11,6 +11,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class AdicionarCarta extends AppCompatActivity {
 
@@ -32,14 +33,14 @@ public class AdicionarCarta extends AppCompatActivity {
         listarBaralhoTask = new ListarBaralhoTask();
         spinnerBaralho = (Spinner) findViewById(R.id.spinner);
 
-        //ArrayList<Baralho> baralhos = listarBaralho();
-        //ArrayAdapter<Baralho> arrayAdapter = new ArrayAdapter<Baralho>(this, android.R.layout.simple_list_item_1, baralhos);
-        //spinnerBaralho.setAdapter(arrayAdapter);
+        List<Baralho> baralhos = listarBaralho();
+        ArrayAdapter<Baralho> arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, baralhos);
+        spinnerBaralho.setAdapter(arrayAdapter);
     }
 
-    public ArrayList<Baralho> listarBaralho ()
+    public List<Baralho> listarBaralho ()
     {
-        ArrayList<Baralho> baralhos = listarBaralhoTask.doInBackground();
+        List<Baralho> baralhos = listarBaralhoTask.doInBackground();
         return baralhos;
     }
 

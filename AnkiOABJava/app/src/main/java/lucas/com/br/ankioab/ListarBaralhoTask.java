@@ -13,17 +13,17 @@ import feign.gson.GsonDecoder;
  * Created by lucas on 28/09/2017.
  */
 
-public class ListarBaralhoTask extends AsyncTask<Void, Void, ArrayList> {
+public class ListarBaralhoTask extends AsyncTask<Void, Void, List> {
     @Override
-    protected ArrayList<Baralho> doInBackground(Void... params) {
+    protected List<Baralho> doInBackground(Void... params) {
         try {
             // 1. usando a Feign para fazer uma chamada a uma api rest
             BaralhoRequest request = Feign.builder().
                     decoder(new GsonDecoder()).
-                    target(BaralhoRequest.class, "http://192.168.1.102/Anki2");
+                    target(BaralhoRequest.class, "http://20.0.2.231/Anki2");
 
             // 2. Fazendo a chamada e recuperando o objeto convertido
-            ArrayList<Baralho> baralhos = request.getAllBaralho();
+            List<Baralho> baralhos = request.getAllBaralho();
             return baralhos;
 
         } catch (Exception e) {

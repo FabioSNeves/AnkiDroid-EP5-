@@ -1,5 +1,7 @@
 package lucas.com.br.ankioab;
 
+import java.util.List;
+
 import feign.Param;
 import feign.RequestLine;
 
@@ -9,8 +11,8 @@ import feign.RequestLine;
 
 public interface CartaRequest {
 
-    @RequestLine("GET /posts/{id}/")
-    Carta getCarta(@Param("id") Integer id);
+    @RequestLine("GET /api/Carta/Get?id={id}")
+    List<Carta> getCarta(@Param("id") Integer id);
 
     @RequestLine("DELETE /posts/{id}/")
     void deleteCarta(@Param("id") Integer id);

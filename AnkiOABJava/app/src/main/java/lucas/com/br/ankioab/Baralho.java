@@ -9,6 +9,11 @@ public class Baralho {
     private Integer CodBaralho ;
     private String NomeBaralho ;
 
+    @Override
+    public String toString() {
+        return NomeBaralho;
+    }
+
     public Integer getCodBaralho() {return CodBaralho;}
 
     public void setCodBaralho(Integer codBaralho) {this.CodBaralho = codBaralho;}

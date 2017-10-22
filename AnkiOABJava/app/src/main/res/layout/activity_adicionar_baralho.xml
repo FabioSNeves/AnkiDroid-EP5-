@@ -12,20 +12,6 @@
     tools:context="lucas.com.br.ankioab.AdicionarBaralho">
 
 
-    <Button
-        android:id="@+id/btn_show_answer"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text=" ✓"
-        tools:layout_editor_absoluteX="64dp"
-        tools:layout_editor_absoluteY="446dp"
-        android:layout_weight="0.02"
-        android:elevation="0dp"
-        android:textSize="24sp"
-        android:textAllCaps="false"
-        android:onClick="criarBaralho"
-        android:backgroundTint="@android:color/holo_green_dark" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -49,6 +35,21 @@
             style="@style/FontInicial"
             android:textSize="24sp"
             android:textAlignment="center" />
+
+        <Button
+            android:id="@+id/btn_show_answer"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text=" ✓"
+            tools:layout_editor_absoluteX="64dp"
+            tools:layout_editor_absoluteY="446dp"
+            android:layout_weight="0.02"
+            android:elevation="0dp"
+            android:textSize="24sp"
+            android:textAllCaps="false"
+            android:onClick="criarBaralho"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:textColor="@android:color/background_light" />
 
     </LinearLayout>
 </RelativeLayout>

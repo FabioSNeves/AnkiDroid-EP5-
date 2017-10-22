@@ -27,7 +27,8 @@
             tools:layout_editor_absoluteX="64dp"
             tools:layout_editor_absoluteY="446dp"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:onClick="onClick"/>
 
         <TextView
             android:id="@+id/question"
@@ -35,7 +36,7 @@
             android:layout_height="wrap_content"
             android:text="Question"
             style="@style/FontInicial"
-            android:textColor="@android:color/background_light"
+            android:textColor="@android:color/background_dark"
             android:textSize="24sp"
             tools:layout_editor_absoluteX="154dp"
             tools:layout_editor_absoluteY="16dp"
@@ -61,7 +62,7 @@
                 android:layout_marginTop="39dp"
                 android:text="Answer"
                 style="@style/FontInicial"
-                android:textColor="@android:color/background_light"
+                android:textColor="@android:color/background_dark"
                 android:textSize="24sp"
                 tools:layout_editor_absoluteX="161dp"
                 tools:layout_editor_absoluteY="203dp" />
@@ -87,7 +88,8 @@
                 android:layout_alignRight="@+id/progressBar"
                 android:layout_alignEnd="@+id/progressBar"
                 android:backgroundTint="@android:color/holo_blue_light"
-                android:textColor="@android:color/background_light"/>
+                android:textColor="@android:color/background_light"
+                android:onClick="onClick"/>
 
         </RelativeLayout>
 
