@@ -15,7 +15,7 @@ public class LerUsuarioTask extends AsyncTask<String, Void, Usuario> {
             // 1. usando a Feign para fazer uma chamada a uma api rest
             UsuarioRequest request = Feign.builder().
                     decoder(new GsonDecoder()).
-                    target(UsuarioRequest.class, "http://20.0.2.231/Anki2");
+                    target(UsuarioRequest.class, "http://20.0.1.67/Anki2");
 
             // 2. Fazendo a chamada e recuperando o objeto convertido
             Usuario usuario = request.getUsuario(params[0]);

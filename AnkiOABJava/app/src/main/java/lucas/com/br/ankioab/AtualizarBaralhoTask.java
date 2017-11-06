@@ -16,7 +16,7 @@ public class AtualizarBaralhoTask extends AsyncTask<Baralho, Void, Void> {
             // 1. usando a Feign para fazer uma chamada a uma api rest
             BaralhoRequest request = Feign.builder().
                     encoder(new GsonEncoder()).
-                    target(BaralhoRequest.class, "https://jsonplaceholder.typicode.com");
+                    target(BaralhoRequest.class, "http://20.0.1.67/Anki2");
 
             // 2. Fazendo a chamada e enviando o objeto convertido em JSON
             request.updateBaralho(params[0].getCodBaralho(), params[0]);

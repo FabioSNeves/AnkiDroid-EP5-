@@ -16,7 +16,7 @@ public class ExcluirCartaTask extends AsyncTask<Integer, Void, Void> {
             // 1. usando a Feign para fazer uma chamada a uma api rest
             CartaRequest request = Feign.builder().
                     decoder(new GsonDecoder()).
-                    target(CartaRequest.class, "https://jsonplaceholder.typicode.com");
+                    target(CartaRequest.class, "http://20.0.1.67/Anki2");
 
 
             request.deleteCarta(params[0]);

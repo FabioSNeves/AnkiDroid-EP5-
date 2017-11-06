@@ -39,8 +39,6 @@ public class TelaInicial extends AppCompatActivity {
         criarUsuarioTask = new CriarUsuarioTask();
         atualizarUsuarioTask = new AtualizarUsuarioTask();
 
-
-        //lerTodoTask = new LerTodoTask();
     }
 
     public void consultar (View v){

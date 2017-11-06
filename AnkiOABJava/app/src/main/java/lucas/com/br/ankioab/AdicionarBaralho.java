@@ -27,8 +27,8 @@ public class AdicionarBaralho extends AppCompatActivity {
     public void criarBaralho(View v){
         Baralho baralho = new Baralho();
         baralho.setNomeBaralho(form_deck_name.getText().toString());
-
         criarBaralhoTask.doInBackground(baralho);
-        Toast.makeText(this, "Postagem criada com sucesso!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Baralho criado com sucesso!", Toast.LENGTH_SHORT).show();
+        form_deck_name.setText("");
     }
 }

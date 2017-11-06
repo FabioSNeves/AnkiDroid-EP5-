@@ -20,7 +20,7 @@ public class ListarBaralhoTask extends AsyncTask<Void, Void, List> {
             // 1. usando a Feign para fazer uma chamada a uma api rest
             BaralhoRequest request = Feign.builder().
                     decoder(new GsonDecoder()).
-                    target(BaralhoRequest.class, "http://20.0.2.231/Anki2");
+                    target(BaralhoRequest.class, "http://20.0.1.67/Anki2");
 
             // 2. Fazendo a chamada e recuperando o objeto convertido
             List<Baralho> baralhos = request.getAllBaralho();

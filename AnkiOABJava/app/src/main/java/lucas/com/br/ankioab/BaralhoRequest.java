@@ -20,7 +20,7 @@ public interface BaralhoRequest {
     @RequestLine("DELETE /posts/{id}/")
     void deleteBaralho(@Param("id") Integer id);
 
-    @RequestLine("POST /posts")
+    @RequestLine("POST /api/Baralho/")
     void createBaralho(Baralho baralho);
 
     @RequestLine("PUT /posts/{id}")

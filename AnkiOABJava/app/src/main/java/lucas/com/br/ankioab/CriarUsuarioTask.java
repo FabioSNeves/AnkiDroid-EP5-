@@ -15,7 +15,7 @@ public class CriarUsuarioTask extends AsyncTask<Usuario, Void, Void>{
             // 1. usando a Feign para fazer uma chamada a uma api rest
             UsuarioRequest request = Feign.builder().
                     encoder(new GsonEncoder()).
-                    target(UsuarioRequest.class, "https do visual studio");
+                    target(UsuarioRequest.class, "http://20.0.1.67/Anki2");
 
             // 2. Fazendo a chamada e enviando o objeto convertido em JSON
             request.createUsuario(params[0]);

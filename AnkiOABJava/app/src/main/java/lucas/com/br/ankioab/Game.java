@@ -4,9 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Game extends AppCompatActivity implements View.OnClickListener {
     private ArrayList<Carta> cardList;
@@ -28,7 +26,7 @@ public class Game extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_game);
 
         Bundle bundleObject = getIntent().getExtras();
-        //cardList = (ArrayList<Card>) bundleObject.getSerializable("ID");
+        //cardList = (ArrayList<Carta>) bundleObject.getSerializable("ID");
 
         idBaralho = (Integer) bundleObject.getSerializable("ID");
         lerCartaTask = new LerCartaTask();

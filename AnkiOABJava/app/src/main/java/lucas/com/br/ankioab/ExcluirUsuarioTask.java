@@ -15,7 +15,7 @@ public class ExcluirUsuarioTask extends AsyncTask<Integer, Void, Void> {
             // 1. usando a Feign para fazer uma chamada a uma api rest
             UsuarioRequest request = Feign.builder().
                     decoder(new GsonDecoder()).
-                    target(UsuarioRequest.class, "https do visual studio");
+                    target(UsuarioRequest.class, "http://20.0.1.67/Anki2");
 
 
             request.deleteUsuario(params[0]);

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.*;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.*;
 
 public class TelaMenu extends AppCompatActivity {
 
@@ -27,14 +27,13 @@ public class TelaMenu extends AppCompatActivity {
         frenteCarta = (EditText) findViewById(R.id.card_front);
         versoCarta = (EditText) findViewById(R.id.card_back);
         nomeBaralho = (EditText) findViewById(R.id.form_deck_name);
+        listarBaralhoTask = new ListarBaralhoTask();
 
         // código para evitar erro de permissao no aplicativo android
         // ao acessar a internet:
         StrictMode.ThreadPolicy policy = new
                 StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-
-        listarBaralhoTask = new ListarBaralhoTask();
 
         final List<Baralho> baralhos = preencherLista();
         ArrayAdapter<Baralho> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, baralhos);
@@ -68,11 +67,6 @@ public class TelaMenu extends AppCompatActivity {
     public void adicionarBaralho(View v) {
         Intent addBaralho = new Intent(this, AdicionarBaralho.class);
         startActivity(addBaralho);
-    }
-
-    public void game (View v) {
-        Intent game = new Intent(this, Game.class);
-        startActivity(game);
     }
 
 }
